@@ -12,7 +12,9 @@ class App extends Component {
 
   //Your code here:
 
-
+  componentDidMount() {
+    this.handleAddTimer()
+  }
 
 
 
@@ -48,6 +50,7 @@ class App extends Component {
       timerIDs: [...prevState.timerIDs, Math.floor(Math.random()*1000)]
     }))
   }
+
 
   // removeTimer updates state, removing any timer that matches the provided author
   removeTimer = id => {
